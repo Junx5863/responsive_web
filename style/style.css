@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 2px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+  background-image: url("https://images.unsplash.com/photo-1623659248894-1a0272243054?q=80&w=3005&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: orange;
+}
+
+/* HEADER */
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: #fff;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropDown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: #000;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+}
+
+.dropDown_menu.open{
+    height: 240px;
+}
+
+.dropDown_menu li{
+    padding: 0.7rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropDown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* SECTION MAIN */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(200px, auto);
+  }
+
+.sectionContainer{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px;
+    
+}
+.title{
+    color: #000;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;;
+    transition: scale 0.2 ease;
+}
+
+.descriptionContent{
+    text-align: justify;
+    padding-bottom: 20px;
+
+}
+.imageGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+
+}
+.containerImage{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2018/01/An-Ode-to-the-RS3-inline3-626x382.jpg?crop=1.00xw:0.819xh;0,0.103xh&resize=640:*');
+}
+.container_image{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+/* ENGINI */
+.image_engine {
+    background-image: url('https://w0.peakpx.com/wallpaper/62/238/HD-wallpaper-engine-motor-audi-car.jpg');
+}
+.image_engine2 {
+    background-image: url('https://w0.peakpx.com/wallpaper/786/626/HD-wallpaper-2015-abt-rs6-r-based-on-audi-rs6-engine-car.jpg');
+}
+.image_engine3 {
+    background-image: url('https://w0.peakpx.com/wallpaper/936/266/HD-wallpaper-2014-mtm-audi-rs-q3-2-5-tfsi-quattro-engine-car.jpg');
+}
+
+/* LIGTHS */
+.image_ligth {
+    background-image: url('https://w0.peakpx.com/wallpaper/847/939/HD-wallpaper-audi-a3-led-lights.jpg');
+}
+.image_ligth2 {
+    background-image: url('https://w0.peakpx.com/wallpaper/643/643/HD-wallpaper-audi-r8-auto-car-dark-lights-night-supercar-vehicle.jpg');
+}
+.image_ligth3 {
+    background-image: url('https://w0.peakpx.com/wallpaper/1020/79/HD-wallpaper-audi-front-lights-black-engine-german-speed.jpg');
+}
+
+/* WHEELS_AND_RIMS */
+.wheel_image {
+    background-image: url('https://w0.peakpx.com/wallpaper/905/796/HD-wallpaper-audi-audi-rs7-wheel.jpg');
+}
+.wheel_image_2 {
+    background-image: url('https://w0.peakpx.com/wallpaper/405/565/HD-wallpaper-audi-car-black-wheel.jpg');
+}
+.wheel_image_3 {
+    background-image: url('https://w0.peakpx.com/wallpaper/460/163/HD-wallpaper-audi-car-wheel-black.jpg');
+}
+
+/* COLORS */
+
+.colors_image {
+    background-image: url('https://w0.peakpx.com/wallpaper/255/200/HD-wallpaper-audi-rs5-audi-audi-a5-audi-s5-car-cars-quattro-rs5-sport.jpg');
+}
+.colors_image_2 {
+    background-image: url('https://w0.peakpx.com/wallpaper/645/855/HD-wallpaper-audi-r8-audi-sports-car-car-yellow.jpg');
+}
+.colors_image_3 {
+    background-image: url('https://w0.peakpx.com/wallpaper/1005/863/HD-wallpaper-audi-s5-blue-car.jpg');
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px){
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .navbar .links, .navbar .action_btn{
+        display: none;
+    }
+    .dropDown_menu{
+        display: block;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(200px, auto);
+      }
+    .imageGrid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        grid-auto-rows: minmax(400px, auto);
+    
+    }
+    
+}
+
+@media (max-width: 576px){
+    .dropDown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
