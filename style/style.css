@@ -1,14 +1,14 @@
 * {
   margin: 0;
-  padding: 2px;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial,' 'sans-serif';
 }
 
 body {
   height: 100vh;
-  background-color: #000;
-  background-image: url("https://images.unsplash.com/photo-1623659248894-1a0272243054?q=80&w=3005&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-color: #9c9a9a ;
+  /* background-image: url("../style/assets/audi_photo_1.jpg"); */
   background-size: cover;
   background-position: center;
 }
@@ -165,48 +165,120 @@ a:hover {
 }
 /* ENGINI */
 .image_engine {
-    background-image: url('https://w0.peakpx.com/wallpaper/62/238/HD-wallpaper-engine-motor-audi-car.jpg');
+    background-image: url('../style/assets/engine_1.jpg');
 }
 .image_engine2 {
-    background-image: url('https://w0.peakpx.com/wallpaper/786/626/HD-wallpaper-2015-abt-rs6-r-based-on-audi-rs6-engine-car.jpg');
+    background-image: url('../style/assets/engine_2.jpg');
 }
 .image_engine3 {
-    background-image: url('https://w0.peakpx.com/wallpaper/936/266/HD-wallpaper-2014-mtm-audi-rs-q3-2-5-tfsi-quattro-engine-car.jpg');
+    background-image: url('../style/assets/engine_3.jpg');
 }
 
 /* LIGTHS */
 .image_ligth {
-    background-image: url('https://w0.peakpx.com/wallpaper/847/939/HD-wallpaper-audi-a3-led-lights.jpg');
+    background-image: url('../style/assets/ligth_1.jpg');
 }
 .image_ligth2 {
-    background-image: url('https://w0.peakpx.com/wallpaper/643/643/HD-wallpaper-audi-r8-auto-car-dark-lights-night-supercar-vehicle.jpg');
+    background-image: url('../style/assets/ligth_2.jpg');
 }
 .image_ligth3 {
-    background-image: url('https://w0.peakpx.com/wallpaper/1020/79/HD-wallpaper-audi-front-lights-black-engine-german-speed.jpg');
+    background-image: url('../style/assets/ligth_3.jpg');
 }
 
 /* WHEELS_AND_RIMS */
 .wheel_image {
-    background-image: url('https://w0.peakpx.com/wallpaper/905/796/HD-wallpaper-audi-audi-rs7-wheel.jpg');
+    background-image: url('../style/assets/wheel_1.jpg');
 }
 .wheel_image_2 {
-    background-image: url('https://w0.peakpx.com/wallpaper/405/565/HD-wallpaper-audi-car-black-wheel.jpg');
+    background-image: url('../style/assets/wheel_2.jpg');
 }
 .wheel_image_3 {
-    background-image: url('https://w0.peakpx.com/wallpaper/460/163/HD-wallpaper-audi-car-wheel-black.jpg');
+    background-image: url('../style/assets/wheel_3.jpg');
 }
 
 /* COLORS */
 
 .colors_image {
-    background-image: url('https://w0.peakpx.com/wallpaper/255/200/HD-wallpaper-audi-rs5-audi-audi-a5-audi-s5-car-cars-quattro-rs5-sport.jpg');
+    background-image: url('../style/assets/car_1.jpg');
 }
 .colors_image_2 {
-    background-image: url('https://w0.peakpx.com/wallpaper/645/855/HD-wallpaper-audi-r8-audi-sports-car-car-yellow.jpg');
+    background-image: url('../style/assets/car_2.jpg');
 }
 .colors_image_3 {
-    background-image: url('https://w0.peakpx.com/wallpaper/1005/863/HD-wallpaper-audi-s5-blue-car.jpg');
+    background-image: url('../style/assets/car_3.jpg');
 }
+
+
+/* FORM WEB PAGE */
+#header {
+    padding: 20px;
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #header h1{
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .containerNext{
+    padding: 20px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .containerNext a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+form {
+    max-width: 100%;
+    margin: 20px auto;
+    margin: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  input, textarea {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #d4d3d3;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  button {
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #000000;
+  }
+
+
+
+
+
 
 
 
@@ -246,3 +318,22 @@ a:hover {
         width: unset;
     }
 }
+
+
+/* SLIDER PAGE */
+/* style.css */
+
+.carousel-item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
