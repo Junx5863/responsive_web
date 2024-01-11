@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial,' 'sans-serif';
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial," "sans-serif";
 }
 
 body {
   height: 100vh;
-  background-color: #9c9a9a ;
+  background-color: #9c9a9a;
   /* background-image: url("../style/assets/audi_photo_1.jpg"); */
   background-size: cover;
   background-position: center;
@@ -28,7 +28,6 @@ a:hover {
 }
 
 /* HEADER */
-
 .navbar {
   width: 100%;
   height: 60px;
@@ -38,302 +37,235 @@ a:hover {
   align-items: center;
   justify-content: space-between;
 }
-
-.navbar .links{
-    display: flex;
-    gap: 2rem;
+.navbar .links {
+  display: flex;
+  gap: 2rem;
 }
-
-.navbar .logo a{
-    font-size: 1.5rem;
-    font-weight: bold;
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-
-.navbar .toggle_btn{
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
-.action_btn{
-    background-color: orange;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
+.navbar .action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
 }
-
-.action_btn:hover{
-    scale: 1.05;
-    color: #fff;
+.navbar .action_btn:hover {
+  scale: 1.05;
+  color: #fff;
 }
-.action_btn:active{
-    scale: 0.95;
+.navbar .action_btn:active {
+  scale: 0.95;
 }
 
 /* DROPDOWN MENU */
-.dropDown_menu{
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0;
-    width: 300px;
-    background-color: #000;
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+.dropDown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background-color: #000;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropDown_menu.open {
+  height: 240px;
+}
+.dropDown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropDown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.dropDown_menu.open{
-    height: 240px;
-}
-
-.dropDown_menu li{
-    padding: 0.7rem ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropDown_menu .action_btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 /* SECTION MAIN */
-
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(200px, auto);
-  }
-
-.sectionContainer{
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 8px;
-    margin: 10px;
-    
-}
-.title{
-    color: #000;
-    padding: 0.5rem 1rem;
-    outline: none;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;;
-    transition: scale 0.2 ease;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(200px, auto);
 }
 
-.descriptionContent{
-    text-align: justify;
-    padding-bottom: 20px;
+.sectionContainer {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 10px;
+}
+.sectionContainer .title {
+  color: #000;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+.sectionContainer .descriptionContent {
+  text-align: justify;
+  padding-bottom: 20px;
+}
+.sectionContainer .imageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(200px, auto);
+}
+.sectionContainer .containerImage {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2018/01/An-Ode-to-the-RS3-inline3-626x382.jpg?crop=1.00xw:0.819xh;0,0.103xh&resize=640:*");
+}
+.sectionContainer .container_image {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
 
-}
-.imageGrid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    grid-auto-rows: minmax(200px, auto);
-
-}
-.containerImage{
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-image: url('https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2018/01/An-Ode-to-the-RS3-inline3-626x382.jpg?crop=1.00xw:0.819xh;0,0.103xh&resize=640:*');
-}
-.container_image{
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-}
 /* ENGINI */
 .image_engine {
-    background-image: url('../style/assets/engine_1.jpg');
+  background-image: url("../assets/engine_1.jpg");
 }
+
 .image_engine2 {
-    background-image: url('../style/assets/engine_2.jpg');
+  background-image: url("../assets/engine_2.jpg");
 }
+
 .image_engine3 {
-    background-image: url('../style/assets/engine_3.jpg');
+  background-image: url("../assets/engine_3.jpg");
 }
 
 /* LIGTHS */
 .image_ligth {
-    background-image: url('../style/assets/ligth_1.jpg');
+  background-image: url("../assets/ligth_1.jpg");
 }
+
 .image_ligth2 {
-    background-image: url('../style/assets/ligth_2.jpg');
+  background-image: url("../assets/ligth_2.jpg");
 }
+
 .image_ligth3 {
-    background-image: url('../style/assets/ligth_3.jpg');
+  background-image: url("../assets/ligth_3.jpg");
 }
 
 /* WHEELS_AND_RIMS */
 .wheel_image {
-    background-image: url('../style/assets/wheel_1.jpg');
+  background-image: url("../assets/wheel_1.jpg");
 }
+
 .wheel_image_2 {
-    background-image: url('../style/assets/wheel_2.jpg');
+  background-image: url("../assets/wheel_2.jpg");
 }
+
 .wheel_image_3 {
-    background-image: url('../style/assets/wheel_3.jpg');
+  background-image: url("../assets/wheel_3.jpg");
 }
 
 /* COLORS */
-
 .colors_image {
-    background-image: url('../style/assets/car_1.jpg');
-}
-.colors_image_2 {
-    background-image: url('../style/assets/car_2.jpg');
-}
-.colors_image_3 {
-    background-image: url('../style/assets/car_3.jpg');
+  background-image: url("../assets/car_1.jpg");
 }
 
+.colors_image_2 {
+  background-image: url("../assets/car_2.jpg");
+}
+
+.colors_image_3 {
+  background-image: url("../assets/car_3.jpg");
+}
 
 /* FORM WEB PAGE */
 #header {
-    padding: 20px;
-    background-color: #3d3d3d;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  padding: 20px;
+  background-color: #3d3d3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header h1 {
+  color: #fff;
+  font-size: 20px;
+}
 
-  #header h1{
-    color: #fff;
-    font-size: 20px;
-  }
-  
-  .containerNext{
-    padding: 20px;
-    background-color: #000000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-  }
-  .containerNext a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-  }
+.containerNext {
+  padding: 20px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+.containerNext a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 form {
-    max-width: 100%;
-    margin: 20px auto;
-    margin: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 20px;
-    color: #fff;
-  }
-  
-  input, textarea {
-    width: 100%;
-    border: none;
-    padding: 20px;
-    font-size: 16px;
-    margin-bottom: 16px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #d4d3d3;
-  }
-  
-  textarea {
-    height: 100px;
-  }
-  
-  button {
-    border: none;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #000000;
-  }
-
-
-
-
-
-
-
-
-
-
-/* RESPONSIVE */
-
-@media screen and (max-width: 768px){
-    .navbar .toggle_btn{
-        display: block;
-    }
-    .navbar .links, .navbar .action_btn{
-        display: none;
-    }
-    .dropDown_menu{
-        display: block;
-    }
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
-        grid-auto-rows: minmax(200px, auto);
-      }
-    .imageGrid{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-        grid-auto-rows: minmax(400px, auto);
-    
-    }
-    
+  max-width: 100%;
+  margin: 20px auto;
+  margin: 20px;
 }
 
-@media (max-width: 576px){
-    .dropDown_menu{
-        left: 2rem;
-        width: unset;
-    }
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
 }
 
-
-/* SLIDER PAGE */
-/* style.css */
-
-.carousel-item img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+input, textarea {
+  width: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #d4d3d3;
 }
 
-.carousel-inner {
-    width: 100vw;
-    height: 100vh;
+textarea {
+  height: 100px;
 }
 
+button {
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
 
-
-
+/*# sourceMappingURL=style.css.map */
