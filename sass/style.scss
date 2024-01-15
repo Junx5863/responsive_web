@@ -1,13 +1,20 @@
+$fontwebPage: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial,' 'sans-serif';
+$dobyBackground: #9c9a9a;
+$basicColorWhite: #fff;
+$basicColorOrange: orange;
+$basicColorBlack: #000;
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial,' 'sans-serif';
+    font-family: $fontwebPage;
   }
   
   body {
     height: 100vh;
-    background-color: #9c9a9a ;
+    background-color: $dobyBackground;
     /* background-image: url("../style/assets/audi_photo_1.jpg"); */
     background-size: cover;
     background-position: center;
@@ -19,12 +26,12 @@
   
   a {
     text-decoration: none;
-    color: #fff;
+    color: $basicColorWhite;
     font-size: 1rem;
   }
   
   a:hover {
-    color: orange;
+    color: $basicColorOrange;
   }
   
   /* HEADER */
@@ -49,15 +56,15 @@
     }
     
     .toggle_btn {
-      color: #fff;
+      color: $basicColorWhite;
       font-size: 1.5rem;
       cursor: pointer;
       display: none;
     }
     
     .action_btn {
-      background-color: orange;
-      color: #fff;
+      background-color: $basicColorOrange;
+      color: $basicColorWhite;
       padding: 0.5rem 1rem;
       border: none;
       outline: none;
@@ -69,7 +76,7 @@
       
       &:hover {
         scale: 1.05;
-        color: #fff;
+        color: $basicColorWhite;
       }
       
       &:active {
@@ -86,7 +93,7 @@
     top: 60px;
     height: 0;
     width: 300px;
-    background-color: #000;
+    background-color: $basicColorBlack;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -120,13 +127,13 @@
   }
   
   .sectionContainer {
-    background-color: #fff;
+    background-color: $basicColorWhite;
     border-radius: 10px;
     padding: 8px;
     margin: 10px;
     
     .title {
-      color: #000;
+      color: $basicColorBlack;
       padding: 0.5rem 1rem;
       outline: none;
       border-radius: 5px;
@@ -166,6 +173,35 @@
       background-size: cover;
       background-position: center;
     }
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      transform: translateY(-5px);
+    }
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .insertInfo{
+    width: 500px;
+    border-start-end-radius: 10px;
+    border-start-start-radius:10px ;
+    text-align: center;
+    display: block;
+    padding: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      background-color: darken(#333, 10%);
+      transform: translateY(-5px);
+    }
+  }
+  .insertInfo p{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
   }
   
   /* ENGINI */
@@ -229,21 +265,21 @@
     align-items: center;
     
     h1 {
-      color: #fff;
+      color: $basicColorWhite;
       font-size: 20px;
     }
   }
   
   .containerNext {
     padding: 20px;
-    background-color: #000000;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     
     a {
-      color: #fff;
+      color: $basicColorWhite;
       text-decoration: none;
       font-size: 20px;
     }
@@ -260,7 +296,7 @@
     margin-bottom: 8px;
     font-weight: bold;
     font-size: 20px;
-    color: #fff;
+    color: $basicColorWhite;
   }
   
   input, textarea {
@@ -285,3 +321,4 @@
     cursor: pointer;
     padding: 10px 15px
   }  
+  
