@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  
+      li {
+        padding: 10px 0;
+      }
+    }
+  
+    .hamburger-menu {
+      display: block;
+    }
+  }
+  
