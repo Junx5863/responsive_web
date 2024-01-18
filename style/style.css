@@ -1,302 +1,125 @@
-* {
+@import 'style/style.css';
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial," "sans-serif";
+}
+
+html {
+  font-size: 100%;
 }
 
 body {
-  height: 100vh;
-  background-color: #9c9a9a;
-  /* background-image: url("../style/assets/audi_photo_1.jpg"); */
-  background-size: cover;
-  background-position: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: black;
+  color: white;
 }
 
-li {
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+ul, ol {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* And any other elements that require resetting */
+* {
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  background: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+.navbar .logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar .nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.navbar .nav-links li {
+  padding: 0 1rem;
+}
+.navbar .nav-links a {
+  text-decoration: none;
   color: #fff;
   font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
 }
-
-a:hover {
-  color: orange;
+.navbar .nav-links a.active, .navbar .nav-links a:hover {
+  color: #ffd700;
 }
-
-/* HEADER */
-.navbar {
-  width: 100%;
-  height: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navbar .links {
-  display: flex;
-  gap: 2rem;
-}
-.navbar .logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.navbar .toggle_btn {
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-}
-.navbar .action_btn {
-  background-color: orange;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: scale 0.2 ease;
-}
-.navbar .action_btn:hover {
-  scale: 1.05;
-  color: #fff;
-}
-.navbar .action_btn:active {
-  scale: 0.95;
-}
-
-/* DROPDOWN MENU */
-.dropDown_menu {
-  display: none;
+.navbar .nav-links a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #ffd700;
   position: absolute;
-  right: 2rem;
-  top: 60px;
-  height: 0;
-  width: 300px;
-  background-color: #000;
-  backdrop-filter: blur(15px);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease;
+  width: 0%; /* Set to 0% initially */
 }
-.dropDown_menu.open {
-  height: 240px;
+.navbar .nav-links a.active::after, .navbar .nav-links a:hover::after {
+  width: 100%; /* Full width on active/hover */
 }
-.dropDown_menu li {
-  padding: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.dropDown_menu .action_btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-/* SECTION MAIN */
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  grid-auto-rows: minmax(200px, auto);
-}
-
-.sectionContainer {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 8px;
-  margin: 10px;
-  transition: all 0.3s ease-in-out;
-}
-.sectionContainer .title {
-  color: #000;
-  padding: 0.5rem 1rem;
-  outline: none;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: bold;
+.navbar .hamburger-menu {
+  display: none;
+  font-size: 24px;
   cursor: pointer;
-  transition: scale 0.2 ease;
-}
-.sectionContainer .descriptionContent {
-  text-align: justify;
-  padding-bottom: 20px;
-}
-.sectionContainer .imageGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  grid-auto-rows: minmax(200px, auto);
-}
-.sectionContainer .containerImage {
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-image: url("https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2018/01/An-Ode-to-the-RS3-inline3-626x382.jpg?crop=1.00xw:0.819xh;0,0.103xh&resize=640:*");
-}
-.sectionContainer .container_image {
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-}
-.sectionContainer:hover {
-  transform: translateY(-5px);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-}
-
-.insertInfo {
-  width: 500px;
-  border-start-end-radius: 10px;
-  border-start-start-radius: 10px;
-  text-align: center;
-  display: block;
-  padding: 15px;
-  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
-  transition: all 0.3s ease-in-out;
-}
-.insertInfo:hover {
-  background-color: #1a1a1a;
-  transform: translateY(-5px);
-}
-
-.insertInfo p {
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
   color: #fff;
-}
-
-/* ENGINI */
-.image_engine {
-  background-image: url("../assets/engine_1.jpg");
-}
-
-.image_engine2 {
-  background-image: url("../assets/engine_2.jpg");
-}
-
-.image_engine3 {
-  background-image: url("../assets/engine_3.jpg");
-}
-
-/* LIGTHS */
-.image_ligth {
-  background-image: url("../assets/ligth_1.jpg");
-}
-
-.image_ligth2 {
-  background-image: url("../assets/ligth_2.jpg");
-}
-
-.image_ligth3 {
-  background-image: url("../assets/ligth_3.jpg");
-}
-
-/* WHEELS_AND_RIMS */
-.wheel_image {
-  background-image: url("../assets/wheel_1.jpg");
-}
-
-.wheel_image_2 {
-  background-image: url("../assets/wheel_2.jpg");
-}
-
-.wheel_image_3 {
-  background-image: url("../assets/wheel_3.jpg");
-}
-
-/* COLORS */
-.colors_image {
-  background-image: url("../assets/car_1.jpg");
-}
-
-.colors_image_2 {
-  background-image: url("../assets/car_2.jpg");
-}
-
-.colors_image_3 {
-  background-image: url("../assets/car_3.jpg");
-}
-
-/* FORM WEB PAGE */
-#header {
-  padding: 20px;
-  background-color: #3d3d3d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#header h1 {
-  color: #fff;
-  font-size: 20px;
-}
-
-.containerNext {
-  padding: 20px;
-  background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-}
-.containerNext a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-form {
-  max-width: 100%;
-  margin: 20px auto;
-  margin: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 20px;
-  color: #fff;
-}
-
-input, textarea {
-  width: 100%;
-  border: none;
-  padding: 20px;
-  font-size: 16px;
-  margin-bottom: 16px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  background-color: #d4d3d3;
-}
-
-textarea {
-  height: 100px;
-}
-
-button {
-  border: none;
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  padding: 10px 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
