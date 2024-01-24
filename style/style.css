@@ -347,7 +347,7 @@ footer {
 }
 
 .style {
-  background-image: url("../assets/audi_photo_1.jpg");
+  background-image: url("../../assets/porsche.jpg");
   background-size: cover;
   color: #fff;
 }
@@ -356,6 +356,19 @@ footer {
 }
 
 p, .style p {
+  color: #fff;
+}
+
+.aerodynamics {
+  background-image: url("../../assets/aerodinamic.jpg");
+  background-size: cover;
+  color: #fff;
+}
+.aerodynamics h2 {
+  color: #8f8f8f;
+}
+
+p, .aerodynamics p {
   color: #fff;
 }
 
@@ -385,7 +398,6 @@ p, .style p {
 
 .image-container {
   flex-basis: 50%;
-  background: url("path-to-your-image.jpg") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
